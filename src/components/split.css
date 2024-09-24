@@ -88,6 +88,10 @@ body {
     justify-content: space-between;
 }
 
+.justify_center{
+    justify-content: center;
+}
+
 .bg_lightgreen {
     background: rgba(121, 150, 151, 0.14);
 }
@@ -102,6 +106,10 @@ body {
 
 .color_green {
     color: green;
+}
+
+.mar_t_15px{
+    margin-top: 15px;
 }
 
 .mar_10px {

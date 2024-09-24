@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './split.css'
 import Loader from "./Loader";
 
@@ -11,6 +11,7 @@ function Split({ downloadBill }) {
     const [data, setData] = useState([])
     const [peopleNum, setPeopleNum] = useState(0);
     const [billVal, setBillVal] = useState(0);
+    const [currentYear, setCurrentYear] = useState('2024');
 
     const handleHelp = () => {
         if (help === false) {
@@ -49,6 +50,18 @@ function Split({ downloadBill }) {
     const downloadBillFun = () => {
         downloadBill()
     }
+
+    const getDate = () => {
+
+    }
+
+    useEffect(() => {
+        let date = new Date();
+        let year = date.getUTCFullYear();
+
+        setCurrentYear(year);
+    }, [])
+
 
     return (
         <div>
@@ -147,6 +160,9 @@ function Split({ downloadBill }) {
                     </section>
                 </div>
             }
+            <div className="flex align_items_center justify_center mar_t_15px">
+                © {currentYear} FairSplit. All rights reserved.
+            </div>
         </div>
     )
 }
