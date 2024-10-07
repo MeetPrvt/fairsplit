@@ -51,10 +51,6 @@ function Split({ downloadBill }) {
         downloadBill()
     }
 
-    const getDate = () => {
-
-    }
-
     useEffect(() => {
         let date = new Date();
         let year = date.getUTCFullYear();
